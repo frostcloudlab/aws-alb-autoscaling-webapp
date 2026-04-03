@@ -1,8 +1,7 @@
 #!/bin/bash
 set -eux
 
-yum update -y || dnf update -y
-
+dnf update -y
 dnf install -y nginx curl
 
 TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" \
